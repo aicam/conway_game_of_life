@@ -13,20 +13,12 @@ def convert_boardtomatrix(board):
         for j in range(board.shape[1]):
             # a represents the value of 8 neighbours
             a = []
-            try:
+            if i - 1 >= 0:
                 a.append(1 if board[i - 1][j] == 1 else 0)
-            except IndexError:
-                a.append(0)
-
-            try:
+            if j - 1 >= 0:
                 a.append(1 if board[i][j - 1] == 1 else 0)
-            except IndexError:
-                a.append(0)
-
-            try:
+            if i - 1 >=0 and j - 1 >= 0:
                 a.append(1 if board[i - 1][j - 1] == 1 else 0)
-            except IndexError:
-                a.append(0)
 
             try:
                 a.append(1 if board[i + 1][j] == 1 else 0)
@@ -57,7 +49,7 @@ def convert_boardtomatrix(board):
                 a.append(1 if board[i - 1][j] == 1 else 0)
             except IndexError:
                 a.append(0)
-
+            print(a, ' ', i, ' ', j)
             matrix[i][j] = np.sum(a)
     return matrix
 
