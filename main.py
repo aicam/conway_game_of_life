@@ -2,6 +2,7 @@ from keras.models import Sequential
 from keras.optimizers import Adam
 from ntm import NeuralTuringMachine as NTM
 
+
 model = Sequential()
 
 
