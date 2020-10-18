@@ -6,8 +6,6 @@ from ntm import NeuralTuringMachine as NTM
 model = Sequential()
 
 
-model.name = "NTM_-_"
-
 
 
 ntm = NTM([625], n_slots=50, m_depth=20, shift_range=3,
